@@ -90,6 +90,8 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </button>
           </nav>
         </div>
+
+        
         <div>
           <div className="border-t border-gray-700 pt-4">
             <p className="text-sm font-semibold">{currentUser.name}</p>

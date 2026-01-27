@@ -87,6 +87,8 @@ const EmployeeDashboard: React.FC<EmployeeDashboardProps> = ({
                   {statusText}
                 </span>
               </div>
+             
+             {/* Check-in-Button */}
               <button
                 onClick={handleAttendanceClick}
                 disabled={isLoading}
@@ -94,9 +96,13 @@ const EmployeeDashboard: React.FC<EmployeeDashboardProps> = ({
               >
                 {isLoading ? 'Getting Location...' : buttonText}
               </button>
+
+              
               {geoError && <p className="text-red-500 text-sm mt-2 text-center">{geoError}</p>}
               {attendanceError && <p className="text-red-500 text-sm mt-2 text-center">{attendanceError}</p>}
             </div>
+
+            {/* Map-View */}
             <div className="bg-white rounded-xl shadow-lg p-2 h-80 md:h-auto">
                 <MapDisplay
                     key={`${mapCenter.latitude}-${mapCenter.longitude}`}
